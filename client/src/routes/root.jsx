@@ -4,8 +4,9 @@ import {
   useLoaderData,
   Form,
   redirect,
+  useNavigation,
 } from 'react-router-dom';
-import { getContacts, createContact } from "../contacts";
+import { getContacts, createContact, deleteContact } from "../contacts";
 
 export async function action() {
   const contact = await createContact();
@@ -14,11 +15,15 @@ export async function action() {
 
 export async function loader() {
   const contacts = await getContacts();
+  
   return { contacts };
 }
 
+
+
 export default function Root() {
   const { contacts } = useLoaderData();
+  const navigation = useNavigation();
     return (
       <>
         <div id="sidebar">
@@ -80,7 +85,11 @@ export default function Root() {
           )}
           </nav>
         </div>
-        <div id="detail">
+        <div id="detail"
+        className={
+          navigation.state === "loading" ? "loading" : ""
+        }>
+          
           <Outlet />
         </div>
       </>
