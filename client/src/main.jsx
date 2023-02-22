@@ -28,10 +28,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />,
     loader: rootLoader,
     action: rootAction,
+    errorElement: <ErrorPage />,
     children: [
+      
       { index: true, element: <Index />},
       {
         path: "contacts/:contactId",
