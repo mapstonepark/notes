@@ -5,7 +5,7 @@ const ContactSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-     conctactLastName: {
+     contactLastName: {
       type: String,
       required: true,
   },
