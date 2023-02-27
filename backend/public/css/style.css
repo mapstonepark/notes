@@ -8,3 +8,9 @@ h1{
 .not{
     text-decoration: underline;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30ch;
+}

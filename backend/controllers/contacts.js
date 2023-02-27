@@ -13,7 +13,7 @@ module.exports = {
     },
     createContact: async (req, res)=>{
         try{
-            await Contact.create({contact: req.body.contactItem, completed: false, userId: req.user.id})
+            await Contact.create({contactFirstName: req.body.contactFirstName, contactLastName: req.body.contactLastName, contactInfo: req.body.contactInfo, notes:req.body.notes, completed: false, userId: req.user.id})
             console.log('Contact has been added!')
             res.redirect('/contacts')
         }catch(err){
