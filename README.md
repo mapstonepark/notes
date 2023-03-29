@@ -1,9 +1,7 @@
-# Personal Contact Management System
+# Introduction to react router tutorial
+A great tutorial for the react router docs that I found to be a great base for future projects.
 
-Next goal: fix pathways for adding new contacts to database
-pulling contacts from database and display results on client side
-make client side mobile friendly
-
+## To launch
 cd notes
 cd client
 npm run dev
